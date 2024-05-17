@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=0, initial-scale=1.0"/>
     
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -14,8 +14,9 @@
     <title>Gugas Burguer </title>
 </head>
 <body>
-    <!-- header-->
 
+
+<!-- header-->
 <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
     <div class="w-full h-full flex flex-col justify-center items-center">
         <img src="./assets/hamb-1.png" 
@@ -33,15 +34,17 @@
         </div>
     </div>
 </header>
-    <!-- fim do header-->
+<!-- fim do header-->
 
     <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
         Conheça nosso menu
     </h2>
-    <!-- inicio menu-->
-    <div id="menu ">
 
-    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+<!-- inicio menu-->
+<div id="menu ">
+
+<main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 ">
 
     <!--Produto item-->
     <div class="flex gap-2">
@@ -50,51 +53,44 @@
         alt="Hamburguer smash"
         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-300"
         />
-
         <div>
-                <p class="font-bold">Hamburguer smash</p>
-                <p class="text-sm">Pão levinho de fermentação natural de trigo, burgue 160g, queijo prato, molho da casa.</p>
-        
-
+            <p class="font-bold">Hamburguer smash</p>
+            <p class="text-sm">Pão levinho de fermentação natural de trigo, burgue 160g, queijo prato, molho da casa.</p>
             <div class="flex items-center gap-2 justify-between mt-3">
                 <p class="font-bold text-lg">R$ 18.90</p>
-                <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer smash"
                 data-price="18.90"
                 >
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
             </div>
         </div>
     </div>
-
     <!--fim Produto item-->
 
-     <!--Produto item-->
+    <!--Produto item-->
      <div class="flex gap-2">
         <img 
         src="./assets/hamb-2.png" 
         alt="Hamburguer Duplo"
         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-300"
         />
-
         <div>
-                <p class="font-bold">Hamburguer Duplo</p>
-                <p class="text-sm">Pão levinho de fermentação natural de trigo, burgue 160g, queijo prato, molho da casa.</p>
-        
-
+            <p class="font-bold">Hamburguer Duplo</p>
+            <p class="text-sm">Pão levinho de fermentação natural de trigo, burgue 160g, queijo prato, molho da casa.</p>
             <div class="flex items-center gap-2 justify-between mt-3">
                 <p class="font-bold text-lg">R$ 32.90</p>
                 <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer Duplo"
                 data-price="32.00"
                 >
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
             </div>
         </div>
     </div>
-
     <!--fim Produto item-->
 
      <!--Produto item-->
@@ -130,34 +126,33 @@
         alt="Hamburguer smash"
         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-300"
         />
-
         <div>
-                <p class="font-bold">Hamburguer Big  </p>
-                <p class="text-sm">Pão levinho de fermentação natural de trigo, burgue 160g, queijo prato, molho da casa.</p>
-        
-
+            <p class="font-bold">Hamburguer Big  </p>
+            <p class="text-sm">Pão levinho de fermentação natural de trigo, burgue 160g, queijo prato, molho da casa.</p>
             <div class="flex items-center gap-2 justify-between mt-3">
                 <p class="font-bold text-lg">R$ 39.00</p>
                 <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer Big"
                 data-price="39.00"
                 >
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
             </div>
         </div>
     </div>
-
     <!--fim Produto item-->
 </main>
 
+
     <div class="mx-auto max-w-7xl px-2 my-2">
-        <h2 class="font-bold text-3xl">Bebidas</h2>
+        <h2 class="font-bold text-3xl">
+        Bebidas
+        </h2>
     </div>
 
     <!--Grid de bebidas-->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
-        <!--Produto item-->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+        <!--bebida item-->
         <div class="flex gap-2 w-full">
             <img 
             src="./assets/refri-1.png" 
@@ -180,7 +175,7 @@
                 </div>
             </div>
         </div>
-         <!--fim Produto item-->
+         <!--fim bebida item-->
 
           <!--Produto item-->
         <div class="flex gap-2 w-full">
@@ -206,10 +201,7 @@
             </div>
         </div>
          <!--fim Produto item-->
-
-
-
-
+         
     </div>
     <!--FIM Grid de bebidas-->
 
@@ -217,7 +209,8 @@
 <!--fim menu-->
 
 <!--MODAL CART-->
-    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
+<div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+    id="cart-modal">
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
             <h2 class=" text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
@@ -236,8 +229,8 @@
                 <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
             </div>
         </div>
-    </div>
-<!-- FIMMODAL CART-->
+</div>
+<!-- FIM MODAL CART-->
 
 <!--buttom cart footer -->
 <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center"> 
@@ -255,6 +248,6 @@
 
 
       
-    
+   <script src="script.js"></script> 
 </body>
 </html>
