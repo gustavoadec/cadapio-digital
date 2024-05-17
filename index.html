@@ -42,7 +42,7 @@
 
 
 <!-- inicio menu-->
-<div id="menu ">
+<div id="menu">
 
 <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 ">
 
@@ -97,7 +97,7 @@
      <div class="flex gap-2">
         <img 
         src="./assets/hamb-3.png" 
-        alt="Hamburguer smash"
+        alt="Hamburguer chease"
         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-3 duration-300"
         />
 
@@ -110,7 +110,7 @@
                 <p class="font-bold text-lg">R$ 28.90</p>
                 <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer chease"
-                data-price="R$ 28.90"
+                data-price="28.90"
                 >
                     <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
@@ -151,7 +151,7 @@
     </div>
 
     <!--Grid de bebidas-->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
         <!--bebida item-->
         <div class="flex gap-2 w-full">
             <img 
@@ -201,7 +201,7 @@
             </div>
         </div>
          <!--fim Produto item-->
-         
+
     </div>
     <!--FIM Grid de bebidas-->
 
@@ -211,10 +211,12 @@
 <!--MODAL CART-->
 <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
     id="cart-modal">
+
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
             <h2 class=" text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
             <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+            
             <p class="font-bold">Total <span id="cart-total">R$0,00</span></p>
             <p class="font-bold mt-4">Endereço de entrega</p>
             <input 
@@ -244,10 +246,6 @@
 
 </footer>
 <!--fim buttom cart footer -->
- 
-
-
-      
-   <script src="script.js"></script> 
+<script src="script.js"></script> 
 </body>
 </html>
