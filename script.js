@@ -64,26 +64,102 @@ function updateCartModal() {
     cartItemContainer.innerHTML = "";
     let total = 0;
 
-    cart.forEach(item =>{
+    cart.forEach(item => {
         const cartItemElement = document.createElement("div");
+        cartItemElement.classList.add("flex", "justify-between", "mb-4","flex-col")
         
-        cartItemElement.innerHTML =`
-        <div>
+        cartItemElement.innerHTML = `
+        <div class="flex items-center justify-between">
             <div>
-                <p>${item.name}</p>
-                <p>${item.quantity}</p>
-                <p>${item.price}</p>
+                <p class="font-bold">${item.name}</p>
+                <p>Qtd: ${item.quantity}</p>
+                <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
-            <div>
-                <button>
-                remover
-                </button>
-            </div>
+
+            <button class="remove-from-cart-btn" data-name="${item.name}">
+                Remover
+            </button>
+
         </div>
          `
+         total += item.price * item.quantity;
          cartItemContainer.appendChild(cartItemElement)
     })
-
-
-    
+    // colocando valor padrao moeda brasileira(real)
+    cartTotal.textContent = total.toLocaleString("pt-BR",{
+        style:"currency",
+        currency:"BRL"
+    })
+    //Atualizando quantidade no carrinho
+    cartCounter.innerHTML = cart.length;
 }
+
+//função remover item do carrinho  
+cartItemContainer.addEventListener("click", function(event){
+    if(event.target.classList.contains("remove-from-cart-btn")){
+        const name = event.target.getAttribute("data-name")
+
+        removeItemCart(name)
+    }
+})
+
+function removeItemCart(name) {
+    const index =cart.findIndex(item => item.name === name);
+    if (index !== -1) {
+        const item=cart[index];
+        if(item.quantity >1){
+            item.quantity -=1;
+            updateCartModal();
+            return;
+        }
+        cart.splice(index,1);
+        updateCartModal();
+    }
+}
+// função endereço
+addressInput.addEventListener("input", function(event){
+    let inputValue = event.target.value;
+
+    if (inputValue !=="") {
+        addressInput.classList.remove("border-red-500")
+        addressWarn.classList.add("hidden")
+        
+    }
+})
+
+// função finalizar pedido
+checkoutBtn.addEventListener("click", function(){
+    const isOpen = checkRestaurantOpen();
+    if (!isOpen) {
+        alert("RESTAURANTE FECHADO !!")
+        return;
+    }
+
+    if (cart.length === 0) return;
+    if (addressInput.value==="") {
+        addressWarn.classList.remove("hidden")
+        addressInput.classList.add("border-red-500")
+        return;
+        
+    } 
+    // Enviar pedido para API WhatsApp
+
+})
+
+//verificar se o restaurante eta aberto
+function checkRestaurantOpen() {
+    const data = new Date();
+    const hora = data.getHours();
+    return hora >=18 && hora < 22;
+}
+const spanItem = document.getElementById ("data-span")
+const isOpen = checkRestaurantOpen();
+
+if (isOpen) {
+    spanItem.classList.remove("bg-red-500")
+    spanItem.classList.add("bg-green-600")
+} else {
+    spanItem.classList.remove("bg-green-600")
+    spanItem.classList.add("bg-red-500")
+}
+
